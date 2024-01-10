@@ -1,0 +1,1 @@
+# three-colors-one-element-icon
