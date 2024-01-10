@@ -1,0 +1,52 @@
+.icon {
+    display: block;
+    width: 64px;
+    height: 64px;
+    mask-repeat: no-repeat;
+    position: relative;
+    mask-size: 100%;
+    background-color: currentColor;
+}
+
+.icon::after,
+.icon::before {
+    background-color: inherit;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    mask-size: 100%;
+}
+
+.icon-a {
+    mask-image: url('./icon.svg#icon');
+    color: #ff7b33;
+}
+
+.icon-a::after {
+    mask-image: url('./icon.svg#border');
+    color: #b0b8bc;
+}
+
+.icon-a::before {
+    mask-image: url('./icon.svg#shadow');
+    color: #d9dfe4;
+}
+
+.icon-a:hover {
+    background-image: linear-gradient(to right,
+            red 40%,
+            orange 40% 50%,
+            yellow 50% 60%,
+            green 60% 70%,
+            blue 70%);
+    ;
+}
+
+.icon-a:hover::after {
+    background-color: fuchsia;
+}
+
+.icon-a:hover::before {
+    background-color: aqua;
+}
